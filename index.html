@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="fr" data-match="similar">
+<head>
+  <meta charset="utf-8">
+  <title>Affinity — Rencontres par intérêts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Affinity : rencontres par goûts culturels et personnalité (Spotify, Babelio, Letterboxd).">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="assets/logo-heart-puzzle.svg" as="image" type="image/svg+xml">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <a class="logo-title brand" href="index.html" aria-label="Aller à l’accueil">
+        <img src="assets/logo-heart-puzzle.svg" alt="" aria-hidden="true">
+        <span>Affinity</span>
+      </a>
+
+      <!-- NAVIGATION PRINCIPALE -->
+      <nav class="main-nav" aria-label="Navigation principale">
+        <div class="list--inline">
+          <a href="index.html" aria-current="page">Accueil</a>
+          <a href="profils.html">Profils</a>
+          <a href="quiz.html">Test</a>
+          <a href="webdoc.html">Webdoc</a>
+          <a href="mentions.html">Mentions</a>
+        </div>
+      </nav>
+
+      <!-- SWITCH MODE -->
+      <div class="list--inline" role="group" aria-label="Choix de mode">
+        <button class="btn btn--ghost" id="btnSimilar" type="button" title="Qui se ressemble s’assemble">Ressemblance</button>
+        <button class="btn" id="btnOpposites" type="button" title="Les opposés s’attirent">Opposés</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENU -->
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container grid grid--2">
+        <div>
+          <h1>Rencontres par goûts & personnalité.</h1>
+          <p class="lead">
+            Connecte Spotify, Babelio, Letterboxd et choisis ton mode :
+            « qui se ressemble s’assemble » (clair) ou « les opposés s’attirent » (sombre).
+          </p>
+          <div class="list--inline" style="margin-top:1rem">
+            <a class="btn" href="quiz.html">Passer le test</a>
+            <a class="btn btn--ghost" href="profils.html">Voir les profils</a>
+          </div>
+        </div>
+
+        <!-- Sources connectées -->
+        <aside class="card" aria-labelledby="sources-title">
+          <h3 id="sources-title">Sources connectées</h3>
+          <p class="muted" style="margin:0">Toutes les données restent privées (prototype étudiant).</p>
+          <div class="chips" style="margin-top:.6rem">
+            <span class="chip">Spotify</span>
+            <span class="chip">Babelio</span>
+            <span class="chip">Letterboxd</span>
+            <span class="chip">Test de personnalité</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- VIDÉO NOIR & BLANC CENTRÉE -->
+    <section class="hero--video" aria-label="Vidéo de présentation">
+      <video controls preload="metadata" poster="assets/schema-matching.png">
+        <source src="assets/demo.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo HTML5.
+      </video>
+    </section>
+
+    <!-- TEASER PROFILS (léger) -->
+    <section class="section" style="padding:2.5rem 0; border-top:1px solid var(--outline);">
+      <div class="container grid grid--cards">
+        <article class="card">
+          <div class="card__header">
+            <div style="display:flex;gap:1rem;align-items:center">
+              <div class="avatar"></div>
+              <div>
+                <h3>Alicia, 25</h3>
+                <p class="muted" style="margin:0">Paris • Musique & cinéma</p>
+              </div>
+            </div>
+            <div class="badge"><span class="badge__dot"></span> 88%</div>
+          </div>
+          <p>Fan de RnB alternatif, lit Sally Rooney, films A24.</p>
+          <div class="badges">
+            <span class="badge badge--spotify"><span class="badge__dot"></span>Spotify</span>
+            <span class="badge badge--letterboxd"><span class="badge__dot"></span>Letterboxd</span>
+          </div>
+          <div class="kpi">
+            <span class="label">Compatibilité</span>
+            <div class="kpi__bar"><div class="kpi__fill" style="--p:88%"></div></div>
+          </div>
+          <a class="btn btn--subtle" href="profils.html">Voir plus</a>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <div style="display:flex;gap:1rem;align-items:center">
+              <div class="avatar"></div>
+              <div>
+                <h3>Mehdi, 29</h3>
+                <p class="muted" style="margin:0">Lyon • Livres & podcasts</p>
+              </div>
+            </div>
+            <div class="badge"><span class="badge__dot"></span> 74%</div>
+          </div>
+          <p>Polars nordiques, playlists BO.</p>
+          <div class="badges">
+            <span class="badge badge--babelio"><span class="badge__dot"></span>Babelio</span>
+            <span class="badge badge--spotify"><span class="badge__dot"></span>Spotify</span>
+          </div>
+          <div class="kpi">
+            <span class="label">Compatibilité</span>
+            <div class="kpi__bar"><div class="kpi__fill" style="--p:74%"></div></div>
+          </div>
+          <a class="btn btn--subtle" href="profils.html">Voir plus</a>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <div style="display:flex;gap:1rem;align-items:center">
+              <div class="avatar"></div>
+              <div>
+                <h3>Zoé, 27</h3>
+                <p class="muted" style="margin:0">Marseille • Art & séries</p>
+              </div>
+            </div>
+            <div class="badge"><span class="badge__dot"></span> 61%</div>
+          </div>
+          <p>Cinéma d’auteur + pop, aime débattre.</p>
+          <div class="badges">
+            <span class="badge badge--letterboxd"><span class="badge__dot"></span>Letterboxd</span>
+          </div>
+          <div class="kpi">
+            <span class="label">Compatibilité</span>
+            <div class="kpi__bar"><div class="kpi__fill" style="--p:61%"></div></div>
+          </div>
+          <a class="btn btn--subtle" href="profils.html">Voir plus</a>
+        </article>
+      </div>
+      <div class="container center" style="margin-top:1.25rem">
+        <a class="btn" href="profils.html" aria-label="Voir tous les profils">Voir tous les profils</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Affinity — Prototype étudiant.</p>
+    </div>
+  </footer>
+
+  <!-- JS minimal -->
+  <script>
+    // année
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // bascule de thème
+    const root = document.documentElement;
+    document.getElementById('btnSimilar').addEventListener('click', () => {
+      root.setAttribute('data-match','similar');
+    });
+    document.getElementById('btnOpposites').addEventListener('click', () => {
+      root.setAttribute('data-match','opposites');
+    });
+  </script>
+</body>
+</html>

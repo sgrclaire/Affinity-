@@ -247,6 +247,15 @@ dl { display:grid; gap:.6rem; }
 dt { font-weight:700; }
 dd { margin:0 0 .6rem 0; color: var(--muted); }
 
+/* Corrige l’ancrage avec header sticky */
+[id^="g-"] {
+  scroll-margin-top: 7rem; /* ajuste si besoin */
+}
+
+dt[id^="g-"] {
+  padding-top: .2rem;
+}
+
 /* Guillemets françaises pour <q> */
 q { quotes: "« " " »" "‹ " " ›"; }
 q::before { content: open-quote; }
